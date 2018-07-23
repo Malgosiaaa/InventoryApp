@@ -8,8 +8,6 @@ import com.example.malgosia.inventoryapp.data.BookContract.BookEntry;
 
 public class BooksDbHelper extends SQLiteOpenHelper {
 
-    public static final String LOG_TAG = BooksDbHelper.class.getSimpleName();
-
     /**
      * Name of the database file
      */
