@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EditorActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/OverviewSectionTitle"
+            android:text="@string/overview" />
+
+        <RelativeLayout style="@style/RelativeLayout">
+
+            <EditText
+                android:id="@+id/edit_product_name"
+                style="@style/ProductNameHint"
+                android:hint="@string/product_name_hint" />
+
+            <EditText
+                android:id="@+id/edit_product_price"
+                style="@style/ProductPriceHint"
+                android:hint="@string/product_price_hint" />
+
+            <TextView
+                style="@style/Currency"
+                android:text="@string/eur" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/Quantity"
+            android:text="@string/quantity" />
+
+        <Spinner
+            android:id="@+id/spinner_quantity"
+            style="@style/Spinner" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/SupplierSectionTitle"
+            android:text="@string/supplier" />
+
+        <LinearLayout style="@style/SupplierLinearLayout">
+
+            <EditText
+                android:id="@+id/edit_supplier_name"
+                style="@style/SupplierNameHint"
+                android:hint="@string/supplier_name" />
+
+            <EditText
+                android:id="@+id/edit_supplier_phone_number"
+                style="@style/SupplierPhoneHint"
+                android:hint="@string/supplier_phone_number" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

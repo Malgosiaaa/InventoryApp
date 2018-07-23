@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">InventoryApp</string>
+    <string name="overview">Overview</string>
+    <string name="product_name_hint">Product name</string>
+    <string name="product_price_hint">Product price</string>
+    <string name="eur">EUR</string>
+    <string name="quantity">Quantity</string>
+    <string name="supplier">Supplier</string>
+    <string name="supplier_name">Supplier name</string>
+    <string name="supplier_phone_number">Supplier phone number</string>
+    <string name="insert_book_details">Insert Book details</string>
+    <string name="delete_all_books">Delete all books</string>
+    <string name="title_save">Save</string>
+    <string name="title_delete">Delete</string>
+    <string name="toast_msg_error">Error while saving book</string>
+    <string name="toast_msg_success">Book saved with row id:" "</string>
+    <string name="table_contains_info">The books table contains" "</string>
+</resources>
