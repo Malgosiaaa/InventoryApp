@@ -5,20 +5,37 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/catalog_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="Hello World!"/>
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Empty view for the situation when there id nothing to show in the list -->
+
+    <RelativeLayout
+        android:id="@+id/empty_view"
+        style="@style/RelativeLayoutEmpty">
+
+        <ImageView
+            android:id="@+id/img_nothing_to_show"
+            style="@style/EmptyImage"
+            android:src="@drawable/ic_nothing" />
+
+        <TextView
+            android:id="@+id/empty_text_view"
+            style="@style/EmptyTextView"
+            android:text="@string/currently_no_books" />
+
+        <TextView
+            android:id="@+id/empty_view_hint"
+            style="@style/EmptyTextViewSec"
+            android:text="@string/do_not_hesitate" />
+    </RelativeLayout>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:src="@drawable/ic_fab"
-        android:layout_margin="20dp"/>
+        style="@style/FAB"
+        android:src="@drawable/ic_fab" />
 
 
 </RelativeLayout>

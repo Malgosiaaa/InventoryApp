@@ -44,9 +44,22 @@
             style="@style/Quantity"
             android:text="@string/quantity" />
 
-        <Spinner
-            android:id="@+id/spinner_quantity"
-            style="@style/Spinner" />
+        <Button
+            android:id="@+id/btn_decrement"
+            style="@style/ButtonDecrement"
+            android:text="@string/minus" />
+
+
+        <EditText
+            android:id="@+id/quantity_value"
+            style="@style/QuantityEditText"
+            android:hint="0" />
+
+        <Button
+            android:id="@+id/btn_increment"
+            style="@style/ButtonIncrement"
+            android:text="@string/plus" />
+
 
     </LinearLayout>
 
@@ -74,7 +87,19 @@
 
         </LinearLayout>
 
+
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/btn_call_supplier"
+            style="@style/ButtonCall"
+            android:src="@drawable/ic_call" />
+
+    </RelativeLayout>
 
 
 </LinearLayout>

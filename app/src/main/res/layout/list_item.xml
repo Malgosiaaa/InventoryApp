@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_linear_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/linear_layout_padding">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NameTitle"
+                android:text="@string/product_name_title" />
+
+            <TextView
+                android:id="@+id/product_name"
+                style="@style/NameActualValue"
+                tools:text="Red Riding Hood" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/PriceTitle"
+                android:text="@string/product_price_title" />
+
+
+            <TextView
+                android:id="@+id/product_price"
+                style="@style/PriceActualValue"
+                tools:text="3,49" />
+
+            <TextView
+                style="@style/CurrencyItemTitle"
+                android:text="@string/eur" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/QuantityTitle"
+                android:text="@string/available_title" />
+
+            <TextView
+                android:id="@+id/product_quantity"
+                style="@style/QuantityActualValueItem"
+                tools:text="2" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_sale"
+        style="@style/SaleButton"
+        android:text="@string/btn_sale_title" />
+
+
+</LinearLayout>

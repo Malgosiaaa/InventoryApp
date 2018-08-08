@@ -16,7 +16,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".EditorActivity"></activity>
+        <activity
+            android:name=".EditorActivity"
+            android:theme="@style/EditorTheme"
+            android:parentActivityName=".MainActivity" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <provider
+            android:name=".data.BookProvider"
+            android:authorities="com.example.malgosia.inventoryapp"
+            android:exported="false" />
+
     </application>
 
 </manifest>
