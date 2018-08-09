@@ -194,7 +194,7 @@
     <style name="SaleButton">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginLeft">@dimen/margin_left_btn_sale</item>
+        <item name="android:layout_marginRight">@dimen/btn_sale_margin_right</item>
         <item name="android:layout_marginTop">@dimen/margin_top_btn_sale</item>
     </style>
 
@@ -235,6 +235,14 @@
         <item name="android:layout_alignParentBottom">true</item>
         <item name="android:layout_alignParentRight">true</item>
         <item name="android:layout_margin">@dimen/fab_layout_margin</item>
+    </style>
+
+    <style name="ProductDetailsItemLayout">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">@dimen/linear_layout_padding</item>
+        <item name="android:layout_weight">2</item>
     </style>
 
 </resources>

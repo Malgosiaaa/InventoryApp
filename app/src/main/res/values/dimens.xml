@@ -15,11 +15,12 @@
     <dimen name="item_font_size">18sp</dimen>
     <dimen name="currency_margin">10dp</dimen>
     <dimen name="margin_left_btn_sale">45dp</dimen>
-    <dimen name="margin_top_btn_sale">15dp</dimen>
+    <dimen name="margin_top_btn_sale">20dp</dimen>
     <dimen name="linear_layout_padding">15dp</dimen>
     <dimen name="empty_text_size">16sp</dimen>
     <dimen name="img_empty_width">70dp</dimen>
     <dimen name="img_empty_height">70dp</dimen>
     <dimen name="empty_second_text_size">15sp</dimen>
     <dimen name="fab_layout_margin">20dp</dimen>
+    <dimen name="btn_sale_margin_right">10dp</dimen>
 </resources>

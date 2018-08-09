@@ -36,8 +36,8 @@
     <string name="available_title">Available:" "</string>
     <string name="currently_no_books">Currently there are no books in the store</string>
     <string name="do_not_hesitate">Please do not hesitate and add one or two</string>
-    <string name="item">item</string>
-    <string name="items">items</string>
+    <string name="item">" " item</string>
+    <string name="items">" " items</string>
     <string name="no_product_in_stock">Currently there is no product in stock</string>
     <string name="product_update_failed">Product update failed</string>
     <string name="enter_product_name">Please enter the product name</string>

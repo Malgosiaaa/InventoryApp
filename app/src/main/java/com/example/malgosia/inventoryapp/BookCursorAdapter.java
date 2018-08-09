@@ -62,7 +62,7 @@ public class BookCursorAdapter extends CursorAdapter {
     public void bindView(View view, final Context context, Cursor cursor) {
         // Find views that will be modified in the list item layout
         // Find the parent layout to sent intent on it
-        // it will be used to update the quantity in editor after modification with sale btn
+        // it will be used to update the quantity in editor after modification with usage of sale btn
         LinearLayout parentLayout = view.findViewById(R.id.parent_linear_layout);
         TextView nameTextView = view.findViewById(R.id.product_name);
         TextView priceTextView = view.findViewById(R.id.product_price);
@@ -76,7 +76,7 @@ public class BookCursorAdapter extends CursorAdapter {
         int quantityColumnIndex = cursor.getColumnIndex(BookEntry.COLUMN_QUANTITY);
 
         // Set column indexes to variables
-        final int rowId = cursor.getInt(idColumnIndex);
+        final int itemId = cursor.getInt(idColumnIndex);
         String name = cursor.getString(nameColumnIndex);
         double price = cursor.getDouble(priceColumnIndex);
         final int quantity = cursor.getInt(quantityColumnIndex);
@@ -84,12 +84,12 @@ public class BookCursorAdapter extends CursorAdapter {
         // Set the quantity with singular or plural item description
         // Use the spaces to avoid app crash according to NumberFormatException
         if (quantity <= 1) {
-            quantityTextView.setText(quantity + " " + context.getResources().getString(R.string.item));
+            quantityTextView.setText(quantity + context.getResources().getString(R.string.item));
         } else {
-            quantityTextView.setText(quantity + " " + context.getResources().getString(R.string.items));
+            quantityTextView.setText(quantity + context.getResources().getString(R.string.items));
         }
 
-        // Update the TextViews with the attributes for the current book
+        // Update the name and priceTextViews with the attributes for the current book
         nameTextView.setText(name);
         priceTextView.setText(String.valueOf(price));
 
@@ -98,7 +98,7 @@ public class BookCursorAdapter extends CursorAdapter {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, EditorActivity.class);
-                Uri currentStockUri = ContentUris.withAppendedId(BookEntry.CONTENT_URI, rowId);
+                Uri currentStockUri = ContentUris.withAppendedId(BookEntry.CONTENT_URI, itemId);
                 intent.setData(currentStockUri);
                 context.startActivity(intent);
             }
@@ -127,7 +127,7 @@ public class BookCursorAdapter extends CursorAdapter {
                     ContentValues contentValues = new ContentValues();
                     contentValues.put(BookEntry.COLUMN_QUANTITY, quantityString);
 
-                    Uri currentStockUri = ContentUris.withAppendedId(BookEntry.CONTENT_URI, rowId);
+                    Uri currentStockUri = ContentUris.withAppendedId(BookEntry.CONTENT_URI, itemId);
 
                     int rowsAffected = context.getContentResolver().update(currentStockUri,
                             contentValues,
@@ -138,9 +138,11 @@ public class BookCursorAdapter extends CursorAdapter {
                     // or plural quantity description
                     if (rowsAffected != 0) {
                         if (quantity <= 0) {
-                            quantityTextView.setText(quantity + " " + context.getResources().getString(R.string.item));
+                            quantityTextView.setText
+                                    (quantity + context.getResources().getString(R.string.item));
                         } else {
-                            quantityTextView.setText(quantity + " " + context.getResources().getString(R.string.items));
+                            quantityTextView.setText
+                                    (quantity + context.getResources().getString(R.string.items));
                         }
                     } else {
                         Toast.makeText(context, R.string.product_update_failed, Toast.LENGTH_SHORT).show();
